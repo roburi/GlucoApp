@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<CarouselPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="GlucoApp.CarouselPagqUno"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage Title="Menu" BackgroundColor="White">
+       
+        <StackLayout  VerticalOptions="Center" Spacing="10" HorizontalOptions="FillAndExpand">
+
+
+            <Image Source="logosicomo.png" WidthRequest="350" HeightRequest="200"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="CenterAndExpand" CharacterSpacing="5" Margin="30">
+                Glucosa Notes
+            </Label>
+
+            <Button
+                    Text="Obtener reporte"
+                    TextColor="Black"
+                    BackgroundColor="LightGreen"
+                    Margin="30,0"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="navigationTogetReporte"/>
+            <Button
+                    Text="Registra tu día"
+                    Margin="30,0"
+                    BackgroundColor="LightBlue"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="navigationToregister"/>
+
+            <Label FontSize="13" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="30,9">
+                Desliza para mas informacion de los niveles de glucosa
+            </Label>
+
+        </StackLayout>
+    </ContentPage>
+        
+    <ContentPage Title="Informacion Niveles" BackgroundImageSource="Salads.png">
+
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="350">
+        <Label Text="Normal" TextTransform="Uppercase" HorizontalTextAlignment="Center" CharacterSpacing="5" FontAttributes="Bold"/>
+            <Frame CornerRadius="10">
+            <StackLayout>
+                <Label FontAttributes="Bold">Ayunas</Label>
+                <Label Margin="10">70 a 100 mg/dl</Label>
+                <Label FontAttributes="Bold">Posprandial</Label>
+                <Label Margin="10">Menos de 140 mg/dl</Label>
+            </StackLayout>
+        </Frame>
+            <Label TextTransform="Uppercase" Text="Prediabetes" HorizontalTextAlignment="Center" CharacterSpacing="5" FontAttributes="Bold"/>
+            <Frame CornerRadius="10">
+            <StackLayout>
+                <Label FontAttributes="Bold">Ayunas</Label>
+                <Label Margin="10">100 a 125 mg/dl</Label>
+                <Label FontAttributes="Bold">Posprandial</Label>
+                <Label Margin="10">140 a 199 mg/dl</Label>
+            </StackLayout>
+        </Frame>
+            <Label TextTransform="Uppercase" Text="diabetes" HorizontalTextAlignment="Center" CharacterSpacing="5" FontAttributes="Bold"/>
+            <Frame CornerRadius="10">
+            <StackLayout>
+                <Label FontAttributes="Bold">Ayunas</Label>
+                <Label Margin="10">Más de 126 mg/dl</Label>
+                <Label FontAttributes="Bold">Posprandial</Label>
+                <Label Margin="10"> Mas de 200 mg/dl</Label>
+            </StackLayout>
+        </Frame>
+
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

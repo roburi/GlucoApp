@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GlucoApp.RegisterPage"
+    BackgroundColor="WhiteSmoke">
+
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White">
+        <!--Cabecera-->
+        <Frame Padding="5" BackgroundColor="LightGreen">
+                <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontAttributes="Bold">Registra tu dia</Label>
+        </Frame>
+        <!--Fin Cabecera-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="WhiteSmoke">
+            <Label Text="Fecha: " HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <DatePicker ClassId="datePickerRegistro"></DatePicker>
+            
+        </StackLayout>
+        <Frame WidthRequest="280" HeightRequest="400" >
+        <StackLayout VerticalOptions="CenterAndExpand">
+            
+            <Frame Padding="5" BackgroundColor="NavajoWhite">
+                <Label Text="Selecciona una opcion" HorizontalTextAlignment="Center"/>
+            </Frame>
+                <!--Grupo de botones 1-->
+            <StackLayout Orientation="Horizontal">
+                 <RadioButton VerticalOptions="Center"
+                      x:Name="DesayunoRadioButton"
+                      GroupName="grupo1"/>
+                <Label Text="Desayuno" VerticalTextAlignment="Center"/>
+                 <RadioButton 
+                      x:Name="AlmuerzoRadioButton"
+                     GroupName="grupo1"/>
+                <Label Text="Almuerzo" VerticalTextAlignment="Center"/>
+                 
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton 
+                      x:Name="CenaRadioButton"
+                      GroupName="grupo1"/>
+                <Label Text="Cena" VerticalTextAlignment="Center"/>
+            </StackLayout>
+           <Frame Padding="5" BackgroundColor="NavajoWhite">
+                <Label Text="Selecciona una opcion" HorizontalTextAlignment="Center"/>
+           </Frame>
+            <!--Grupo de botones 2-->
+            <StackLayout Orientation="Horizontal">
+                 <RadioButton
+                      x:Name="PreRadioButton"
+                     GroupName="grupo2"/>
+                <Label Text="Pre" VerticalTextAlignment="Center"/>
+                 <RadioButton 
+                      x:Name="PostRadioButton"
+                     GroupName="grupo2"/>
+                <Label Text="Post" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <Frame Padding="5" BackgroundColor="CadetBlue">
+                <Label Text="Nivel de Glucosa" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+           </Frame>
+            <StackLayout>
+                <Slider x:Name="SliderGlucosa" Minimum="0" Maximum="400" Value="0"/>
+                <Label  x:Name="EtiquetaGlucosaSlider" Text="{Binding Value}" HorizontalTextAlignment="Center" BindingContext="{x:Reference SliderGlucosa}" TextColor="Black"/>
+            </StackLayout>
+
+        </StackLayout>
+
+        <!--<StackLayout Orientation="Vertical">
+            <Label Text="Desayuno" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout HorizontalOptions="StartAndExpand">
+                    <Label Text="Pre"/>
+                    <Entry IsTextPredictionEnabled="False" Keyboard="Numeric"  WidthRequest="100"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Label Text="Post"/>
+                    <Entry IsTextPredictionEnabled="False" Keyboard="Numeric"  WidthRequest="100"/>
+                </StackLayout>
+
+            </StackLayout>
+            <Label Text="Almuerzo" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal">
+                
+                <StackLayout HorizontalOptions="StartAndExpand">
+                    <Label Text="Pre"/>
+                    <Entry IsTextPredictionEnabled="False" Keyboard="Numeric" WidthRequest="100" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Label Text="Post"/>
+                    <Entry IsTextPredictionEnabled="False" Keyboard="Numeric"  WidthRequest="100"/>
+                </StackLayout>
+
+            </StackLayout>
+            <Label Text="Cena" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout HorizontalOptions="StartAndExpand">
+                    <Label Text="Pre"/>
+                    <Entry IsTextPredictionEnabled="False" Keyboard="Numeric"  WidthRequest="100"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Label Text="Post" HorizontalOptions="FillAndExpand"/>
+                    <Entry IsTextPredictionEnabled="False" Keyboard="Numeric" HorizontalOptions="EndAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>-->
+        </Frame>
+        <Button Text=" Guardar " TextTransform="Uppercase" CornerRadius="9"  WidthRequest="140" Margin="10" x:Name="BtnGuardar"/>
+    </StackLayout>
+
+</ContentPage>
