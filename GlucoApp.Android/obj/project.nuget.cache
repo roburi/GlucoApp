@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "x3Yh75EZBO33MV7wzIyw+3YCJ+tIZofk8MEUB6R0B24Uou5A4R1pDizBCXiMOF+9aQqMptifB/cmhvuO3AECyw==",
+  "dgSpecHash": "ojlBRlwO1WSGOYrBt3R78CBSAU57qXMVOV88SjM+jcf+NeuaC0A9moHfYfhA0otCq37i6O4xQSbpiJoV70bang==",
   "success": true,
   "projectFilePath": "/Users/burgos01/Projects/GlucoApp/GlucoApp.Android/GlucoApp.Android.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,15 @@
     "/Users/burgos01/.nuget/packages/skiasharp/2.80.2/skiasharp.2.80.2.nupkg.sha512",
     "/Users/burgos01/.nuget/packages/skiasharp.views/2.80.2/skiasharp.views.2.80.2.nupkg.sha512",
     "/Users/burgos01/.nuget/packages/skiasharp.views.forms/2.80.2/skiasharp.views.forms.2.80.2.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/sqlitepclraw.lib.e_sqlite3.android/2.0.4/sqlitepclraw.lib.e_sqlite3.android.2.0.4.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.0.4/sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/burgos01/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/burgos01/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "/Users/burgos01/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512",
     "/Users/burgos01/.nuget/packages/xamarin.androidx.activity/1.1.0.5/xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "/Users/burgos01/.nuget/packages/xamarin.androidx.annotation/1.1.0.8/xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
