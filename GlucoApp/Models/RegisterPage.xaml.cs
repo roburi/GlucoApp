@@ -41,8 +41,8 @@ namespace GlucoApp.Models
 
         private async void BtnGuardar_Clicked(object sender, EventArgs e)
         {
-            
-            if(ValidarDatosParte1())
+
+            if (ValidarDatosParte1())
             {
                 if (ValidarDatosParte2())
                 {
@@ -57,11 +57,12 @@ namespace GlucoApp.Models
                     };
 
                     await SQLiteDB.GuardarRegistroAsync(regis);
+
                 }
-                else
-                {
-                    await DisplayAlert("Advertencia!!", "Seleccionar todos los datos", "Cerrar");
-                }
+            else
+            {
+                await DisplayAlert("Advertencia!!", "Seleccionar todos los datos", "Cerrar");
+            }
             }
             else
             {
