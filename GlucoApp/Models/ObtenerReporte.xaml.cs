@@ -12,9 +12,6 @@ namespace GlucoApp
         public ObtenerReporte()
         {
             InitializeComponent();
-
-           
-
         }
     }
 }

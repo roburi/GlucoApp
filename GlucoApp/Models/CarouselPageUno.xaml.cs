@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using GlucoApp.ViewModels;
 using Xamarin.Forms;
+using System.IO;
 
 namespace GlucoApp
 {
@@ -20,8 +21,9 @@ namespace GlucoApp
             {
                 if (db == null)
                 {
-                    db = new SQLiteHelper(P)
+                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"registros.db3"));
                 }
+                return db;
             }
         }
 

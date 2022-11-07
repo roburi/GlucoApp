@@ -79,3 +79,9 @@
 /Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.0/optimized/logosicomo.png
 /Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.0/optimized/pie_chart.png
 /Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.0/optimized/
+/Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/bin/iPhoneSimulator/Debug/SQLite-net.dll
+/Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_v2.dll
+/Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.nativelibrary.dll
+/Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.core.dll
+/Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.provider.dynamic_cdecl.dll
+/Users/burgos01/Projects/GlucoApp/GlucoApp.iOS/bin/iPhoneSimulator/Debug/System.Runtime.CompilerServices.Unsafe.dll
