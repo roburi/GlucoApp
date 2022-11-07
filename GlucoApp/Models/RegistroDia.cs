@@ -12,6 +12,10 @@ namespace GlucoApp.Models
       //Pre y post
       public Boolean tipo2 { get; set; }
       //fecha de registro
+      [MaxLength(50)]
       public DateTime fecha { get; set; }
+      //Nivel de glucosa
+      public int nivelglucosa { get; set; }
+
     }
 }

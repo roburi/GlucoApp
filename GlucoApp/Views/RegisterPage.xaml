@@ -13,7 +13,7 @@
         <!--Fin Cabecera-->
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="WhiteSmoke">
             <Label Text="Fecha: " HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
-            <DatePicker ClassId="datePickerRegistro"></DatePicker>
+            <DatePicker x:Name="datePickerRegistro" Date="{Binding fecha}" ></DatePicker>
             
         </StackLayout>
         <Frame WidthRequest="280" HeightRequest="400" >
@@ -58,7 +58,7 @@
                 <Label Text="Nivel de Glucosa" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
            </Frame>
             <StackLayout>
-                <Slider x:Name="SliderGlucosa" Minimum="0" Maximum="400" Value="0"/>
+                <Slider x:Name="SliderGlucosa" Minimum="0" Maximum="400" Value="0" />
                 <Label  x:Name="EtiquetaGlucosaSlider" Text="{Binding Value}" HorizontalTextAlignment="Center" BindingContext="{x:Reference SliderGlucosa}" TextColor="Black"/>
             </StackLayout>
 

@@ -8,23 +8,10 @@ namespace GlucoApp
 {
     public partial class CarouselPagqUno : CarouselPage
     {
-        static SQLiteHelper db;
 
         public CarouselPagqUno()
         {
             InitializeComponent();
-        }
-
-        public static SQLiteHelper SQLiteDB
-        {
-            get
-            {
-                if (db == null)
-                {
-                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"registros.db3"));
-                }
-                return db;
-            }
         }
 
         private async void navigationToregister(object sender, EventArgs e)
