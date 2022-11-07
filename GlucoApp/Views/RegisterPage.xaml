@@ -13,7 +13,7 @@
         <!--Fin Cabecera-->
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="WhiteSmoke">
             <Label Text="Fecha: " HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
-            <DatePicker x:Name="datePickerRegistro" Date="{Binding fecha}" ></DatePicker>
+            <DatePicker x:Name="datePickerRegistro" IsEnabled="False"></DatePicker>
             
         </StackLayout>
         <Frame WidthRequest="280" HeightRequest="400" >
@@ -26,11 +26,12 @@
             <StackLayout Orientation="Horizontal">
                  <RadioButton VerticalOptions="Center"
                       x:Name="DesayunoRadioButton"
-                      GroupName="grupo1"/>
+                      GroupName="grupo1"
+                          />
                 <Label Text="Desayuno" VerticalTextAlignment="Center"/>
                  <RadioButton 
                       x:Name="AlmuerzoRadioButton"
-                     GroupName="grupo1"/>
+                     GroupName="grupo1" />
                 <Label Text="Almuerzo" VerticalTextAlignment="Center"/>
                  
             </StackLayout>

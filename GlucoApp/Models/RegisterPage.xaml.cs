@@ -9,20 +9,19 @@ namespace GlucoApp.Models
 {
     public partial class RegisterPage : ContentPage
     {
-        public bool tipo1Asignada, tipo2Asignada;
+        public bool tipoD, tipoA, tipoC, tipoPre1, tipoPost1;
         static SQLiteHelper db;
         public RegistroDia regis;
         public RegisterPage()
         {
+            tipoD = true;
+            tipoA = false;
+            tipoC = false;
+            tipoPre1 = false;
+            tipoPost1 = false;
             InitializeComponent();
-            tipo1Asignada = false;
-            tipo2Asignada = false;
-            regis = new RegistroDia()
-            {
-                tipo1 = tipo1Asignada,
-                tipo2 = tipo2Asignada,
-                fecha = DateTime.Now
-            };
+           
+            
 
             this.BindingContext = regis;
 
@@ -47,7 +46,17 @@ namespace GlucoApp.Models
             {
                 if (ValidarDatosParte2())
                 {
-                   // await SQLiteHelper.GuardarRegistroAsync(regis);
+                    regis = new RegistroDia()
+                    {
+                        tipoDesayuno = tipoD,
+                        tipoAlmuerzo = tipoA,
+                        tipoCena = tipoC,
+                        tipoPre = tipoPre1,
+                        tipoPost = tipoPost1,
+                        fecha = DateTime.Now
+                    };
+
+                    await SQLiteDB.GuardarRegistroAsync(regis);
                 }
                 else
                 {
@@ -67,21 +76,23 @@ namespace GlucoApp.Models
             if(DesayunoRadioButton.IsChecked)
             {
                 parte1 = true;
-                tipo1Asignada = true;
-            }else if(AlmuerzoRadioButton.IsChecked)
+                tipoD = true;
+            }
+            else if(AlmuerzoRadioButton.IsChecked)
             {
                 parte1 = true;
-                tipo1Asignada = true;
+                tipoA = true;
+
             }
             else if(CenaRadioButton.IsChecked)
             {
                 parte1 = true;
-                tipo1Asignada = true;
+                tipoC = true;
             }
             else
             {
                 parte1 = false;
-                tipo1Asignada = false;
+
             }
 
             return parte1;
@@ -93,18 +104,21 @@ namespace GlucoApp.Models
             if (PreRadioButton.IsChecked)
             {
                 parte2 = true;
-                tipo2Asignada = true;
+                tipoPre1 = true;
+                tipoPost1 = false;
 
             }
             else if (PostRadioButton.IsChecked)
             {
                 parte2 = true;
-                tipo2Asignada = true;
+                tipoPost1 = true;
+                tipoPre1 = false;
             }
             else
             {
                 parte2 = false;
-                tipo2Asignada = false;
+                tipoPost1 = false;
+
             }
 
             return parte2;
