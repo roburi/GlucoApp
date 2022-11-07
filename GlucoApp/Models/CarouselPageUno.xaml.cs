@@ -29,7 +29,7 @@ namespace GlucoApp
 
         private async void navigationToregister(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegisterPage());
+            await Navigation.PushAsync(new Models.RegisterPage());
         }
         private async void navigationTogetReporte(object sender, EventArgs e)
         {

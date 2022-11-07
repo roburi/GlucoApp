@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="GlucoApp.RegisterPage"
+    x:Class= "GlucoApp.Models.RegisterPage"
     BackgroundColor="WhiteSmoke">
 
     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White">
@@ -104,7 +104,7 @@
             </StackLayout>
         </StackLayout>-->
         </Frame>
-        <Button Text=" Guardar " TextTransform="Uppercase" CornerRadius="9"  WidthRequest="140" Margin="10" x:Name="BtnGuardar"/>
+        <Button Text=" Guardar " TextTransform="Uppercase" CornerRadius="9"  WidthRequest="140" Margin="10" x:Name="BtnGuardar" Clicked="BtnGuardar_Clicked"/>
     </StackLayout>
 
 </ContentPage>

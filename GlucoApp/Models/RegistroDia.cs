@@ -11,7 +11,7 @@ namespace GlucoApp.Models
       public Boolean tipo1 { get; set; }
       //Pre y post
       public Boolean tipo2 { get; set; }
-      //fecha de registros
+      //fecha de registro
       public DateTime fecha { get; set; }
     }
 }

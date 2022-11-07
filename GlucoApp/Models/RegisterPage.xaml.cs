@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace GlucoApp
+namespace GlucoApp.Models
 {
     public partial class RegisterPage : ContentPage
     {
@@ -13,16 +13,16 @@ namespace GlucoApp
 
         }
 
-        protected override void OnAppearing()
+        private async void BtnGuardar_Clicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
-            BtnGuardar.Clicked += BtnGuardar_Clicked;
-        }
+            if(false)
+            {
 
-        private void BtnGuardar_Clicked(object sender, EventArgs e)
-        {
-            
-            throw new NotImplementedException();
+            }
+            else
+            {
+                await DisplayAlert("Advertencia!!", "Seleccionar todos los datos", "Cerrar");
+            }
         }
     }
 }
