@@ -48,16 +48,17 @@ namespace GlucoApp.Models
                 {
                     regis = new RegistroDia()
                     {
-                        tipoDesayuno = tipoD,
-                        tipoAlmuerzo = tipoA,
-                        tipoCena = tipoC,
-                        tipoPre = tipoPre1,
-                        tipoPost = tipoPost1,
-                        fecha = DateTime.Now
+                        tipoDesayuno = DesayunoRadioButton.IsChecked,
+                        tipoAlmuerzo = AlmuerzoRadioButton.IsChecked,
+                        tipoCena = CenaRadioButton.IsChecked,
+                        tipoPre = PreRadioButton.IsChecked,
+                        tipoPost = PostRadioButton.IsChecked,
+                        fecha = DateTime.Now,
+                        nivelglucosa = EtiquetaGlucosaSlider.Text
                     };
 
                     await SQLiteDB.GuardarRegistroAsync(regis);
-
+                    await DisplayAlert("Guardado!!", "Se han guardado los datos", "Cerrar");
                 }
             else
             {

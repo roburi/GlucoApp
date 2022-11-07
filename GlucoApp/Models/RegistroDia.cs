@@ -21,7 +21,6 @@ namespace GlucoApp.Models
         public DateTime fecha { get; set; }
 
       //Nivel de glucosa
-        public int nivelglucosa { get; set; }
-
+        public string nivelglucosa { get; set; }
     }
 }
