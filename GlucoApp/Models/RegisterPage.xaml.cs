@@ -12,6 +12,7 @@ namespace GlucoApp.Models
         public bool tipoD, tipoA, tipoC, tipoPre1, tipoPost1;
         static SQLiteHelper db;
         public RegistroDia regis;
+
         public RegisterPage()
         {
             tipoD = true;
@@ -21,10 +22,6 @@ namespace GlucoApp.Models
             tipoPost1 = false;
             InitializeComponent();
            
-            
-
-            this.BindingContext = regis;
-
         }
 
         public static SQLiteHelper SQLiteDB

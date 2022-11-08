@@ -2,12 +2,12 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
-    x:Class="GlucoApp.ObtenerReporte">
+    x:Class="GlucoApp.ObtenerReporte"
+    BackgroundColor="WhiteSmoke">
 
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Frame>
-            <ListView x:Name="listaRegistros">
+            <Button Text="Obtener Historial" Clicked="ButtonObtener_Clicked"/>
+            <ListView x:Name="listaRegi">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -24,15 +24,13 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding fecha}"  Grid.Row="0" Grid.Column="0" TextColor="Blue"/>
-                                <Label Text="{Binding tipoCena}"  Grid.Row="0" Grid.Column="1" TextColor="Black"/>
-                                <Label Text="{Binding tipoPost}"  Grid.Row="0" Grid.Column="2" TextColor="Orange"/>
-                                <Label Text="{Binding nivelGlucosa}" Grid.Row="0" Grid.Column="3" TextColor="Green"/>
+                                <Label Text="{Binding nivelGlucosa}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </Frame>
+        
     </StackLayout>
    
 

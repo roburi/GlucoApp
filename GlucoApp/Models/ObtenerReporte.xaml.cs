@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using GlucoApp.ViewModels;
-using Microcharts.Forms;
 using Xamarin.Forms;
 
 namespace GlucoApp
@@ -10,6 +8,12 @@ namespace GlucoApp
     public partial class ObtenerReporte : ContentPage
     {
         static SQLiteHelper db;
+
+        public ObtenerReporte()
+        {
+            InitializeComponent();
+        }
+        
         public static SQLiteHelper SQLiteDB
         {
             get
@@ -21,18 +25,17 @@ namespace GlucoApp
                 return db;
             }
         }
-        public ObtenerReporte()
-        {
-            InitializeComponent();
 
-            var RegistroList = SQLiteDB.GetDatosAsync();
-            if (RegistroList != null)
+        private async void ButtonObtener_Clicked(object sender, EventArgs e)
+        {
+            var regisList = await SQLiteDB.GetDatosAsync();
+            if(regisList != null)
             {
-                //listaRegistros.ItemsSource = RegistroList;
+                listaRegi.ItemsSource = regisList;
             }
 
+            await DisplayAlert("qweqwe","ewqewqe","cerrar");
         }
-
-
+        
     }
 }
