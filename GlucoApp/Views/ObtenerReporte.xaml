@@ -5,9 +5,34 @@
     xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
     x:Class="GlucoApp.ObtenerReporte">
 
-    <StackLayout>
-        <Label Text="Chart" FontSize="14" FontAttributes="Bold" TextColor="Black"/>
-        <microcharts:ChartView HeightRequest="200" ClassId="chart1"/>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Frame>
+            <ListView x:Name="listaRegistros">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition  Height="Auto"/>
+                                    <RowDefinition  Height="Auto"/>
+                                
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding fecha}"  Grid.Row="0" Grid.Column="0" TextColor="Blue"/>
+                                <Label Text="{Binding tipoCena}"  Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                                <Label Text="{Binding tipoPost}"  Grid.Row="0" Grid.Column="2" TextColor="Orange"/>
+                                <Label Text="{Binding nivelGlucosa}" Grid.Row="0" Grid.Column="3" TextColor="Green"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Frame>
     </StackLayout>
    
 

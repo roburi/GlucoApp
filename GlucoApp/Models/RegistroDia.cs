@@ -4,9 +4,9 @@ namespace GlucoApp.Models
 {
     public class RegistroDia
     { 
-      [PrimaryKey,AutoIncrement]
-      //Llave primaria
-      public int id_registro { get; set; }
+      [PrimaryKey, AutoIncrement]
+        //Llave primaria
+        public int id_registro { get; set; }
 
       //Desayuno, comida y cena
         public Boolean tipoDesayuno { get; set; }

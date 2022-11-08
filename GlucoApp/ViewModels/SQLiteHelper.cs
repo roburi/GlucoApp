@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using GlucoApp.Models;
 using SQLite;
 
@@ -26,5 +28,15 @@ namespace GlucoApp.ViewModels
                 return null;
             }
         }
+
+        public Task<List<RegistroDia>> getDatosAsync()
+        {
+            return db.Table<RegistroDia>().ToListAsync();
+        }
+        public Task<RegistroDia> GetRegistroPorDia(DateTime fecha)
+        {
+            return db.Table<RegistroDia>().Where(a => a.fecha == fecha).FirstOrDefaultAsync();
+        }
+
     }
 }
