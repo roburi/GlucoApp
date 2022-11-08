@@ -29,10 +29,11 @@ namespace GlucoApp.ViewModels
             }
         }
 
-        public Task<List<RegistroDia>> getDatosAsync()
+        public async Task<List<RegistroDia>> GetDatosAsync()
         {
-            return db.Table<RegistroDia>().ToListAsync();
+            return await db.Table<RegistroDia>().ToListAsync();
         }
+
         public Task<RegistroDia> GetRegistroPorDia(DateTime fecha)
         {
             return db.Table<RegistroDia>().Where(a => a.fecha == fecha).FirstOrDefaultAsync();

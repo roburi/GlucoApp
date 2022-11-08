@@ -24,6 +24,15 @@ namespace GlucoApp
         public ObtenerReporte()
         {
             InitializeComponent();
+
+            var RegistroList = SQLiteDB.GetDatosAsync();
+            if (RegistroList != null)
+            {
+                //listaRegistros.ItemsSource = RegistroList;
+            }
+
         }
+
+
     }
 }
