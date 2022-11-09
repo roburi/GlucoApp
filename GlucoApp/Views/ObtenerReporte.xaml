@@ -15,16 +15,21 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition  Height="Auto"/>
                                     <RowDefinition  Height="Auto"/>
-                                
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding fecha}"  Grid.Row="0" Grid.Column="0" TextColor="Blue"/>
-                                <Label Text="{Binding nivelGlucosa}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
+                                <Label Text="{Binding nivelGlucosa}" Grid.Row="0" Grid.Column="0" TextColor="Black" TextType="Text"/>
+                                <Label Text="{Binding tipoDesayuno}" Grid.Row="1" Grid.Column="1" TextColor="Black" TextType="Text"/>
+                                <Label Text="{Binding tipoAlmuerzo}" Grid.Row="2" Grid.Column="2" TextColor="Black" TextType="Text"/>
+                                <Label Text="{Binding tipoCena}" Grid.Row="3" Grid.Column="3" TextColor="Black" TextType="Text"/>
+                                <Label Text="{Binding tipoPre}" Grid.Row="3" Grid.Column="3" TextColor="Black" TextType="Text"/>
+                                <Label Text="{Binding tipoPost}" Grid.Row="3" Grid.Column="3" TextColor="Black" TextType="Text"/>
+                                <Label Text="{Binding fecha}"  Grid.Row="0" Grid.Column="2" TextColor="Blue"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

@@ -34,7 +34,6 @@ namespace GlucoApp
                 listaRegi.ItemsSource = regisList;
             }
 
-            await DisplayAlert("qweqwe","ewqewqe","cerrar");
         }
         
     }
